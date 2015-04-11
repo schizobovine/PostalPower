@@ -3303,6 +3303,52 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <text x="0" y="1.4478" size="0.5" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
 <wire x1="0" y1="-0.5" x2="0" y2="0.5" width="0.1524" layer="21"/>
 </package>
+<package name="DIODE-ZENNER-7.62MM">
+<pad name="A" x="-3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<pad name="K" x="3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<text x="-4.716" y="-0.005" size="0.5" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<wire x1="-2.81" y1="0" x2="-1.905" y2="0" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="0" x2="-1.905" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="0.889" x2="1.905" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0.889" x2="1.905" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0" x2="2.81" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0" x2="1.905" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-0.889" x2="1.524" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="-0.889" x2="-1.905" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-0.889" x2="-1.905" y2="0" width="0.1524" layer="21"/>
+<text x="4.9" y="0" size="0.5" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="1.524" y1="-0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0.6" x2="-0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.6" x2="0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0" x2="-0.5" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="1" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+</package>
+<package name="DIODE-ZENNER-10.16MM">
+<pad name="A" x="-5.08" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<pad name="K" x="5.08" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<text x="-6.016" y="-0.005" size="0.5" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<wire x1="-4.08" y1="0" x2="-2" y2="0" width="0.1524" layer="21"/>
+<wire x1="-2" y1="0" x2="-2" y2="1" width="0.1524" layer="21"/>
+<wire x1="-2" y1="1" x2="1.524" y2="1" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="1" x2="2" y2="1" width="0.1524" layer="21"/>
+<wire x1="2" y1="1" x2="2" y2="0" width="0.1524" layer="21"/>
+<wire x1="2" y1="0" x2="4.08" y2="0" width="0.1524" layer="21"/>
+<wire x1="2" y1="0" x2="2" y2="-1" width="0.1524" layer="21"/>
+<wire x1="2" y1="-1" x2="1.524" y2="-1" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="-1" x2="-2" y2="-1" width="0.1524" layer="21"/>
+<wire x1="-2" y1="-1" x2="-2" y2="0" width="0.1524" layer="21"/>
+<text x="6.1" y="0" size="0.5" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="1.524" y1="-1" x2="1.524" y2="1" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0.7" x2="-0.5" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.7" x2="0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0" x2="-0.5" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.7" x2="0.5" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.7" x2="1" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.7" x2="0.5" y2="-0.7" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NPN-1">
@@ -5404,6 +5450,24 @@ Production Part - 8199
 <technology name=""/>
 </technologies>
 </device>
+<device name="7.62MM-PTH" package="DIODE-ZENNER-7.62MM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="10.16MM-PTH" package="DIODE-ZENNER-10.16MM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -5419,17 +5483,17 @@ Production Part - 8199
 </classes>
 <parts>
 <part name="Q1" library="A_butts" deviceset="TRANSISTOR_NPN" device="TO-92-AMMO-EBC" value="2N3904"/>
-<part name="Q2" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="2N7000"/>
+<part name="Q2" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="FQP30N06L"/>
 <part name="R2" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-10.16MM" value="Iset"/>
 <part name="SUPPLY2" library="A_butts" deviceset="VCC" device=""/>
 <part name="GND2" library="A_butts" deviceset="GND" device=""/>
 <part name="H1" library="A_butts" deviceset="HOLE" device="#2"/>
-<part name="OUT" library="A_butts" deviceset="M02" device="PTH" value="M02PTH"/>
+<part name="LED" library="A_butts" deviceset="M02" device="PTH" value="M02PTH"/>
 <part name="H2" library="A_butts" deviceset="HOLE" device="#2"/>
 <part name="IN" library="A_butts" deviceset="M03" device="PTH"/>
 <part name="SUPPLY1" library="A_butts" deviceset="VCC" device=""/>
 <part name="GND1" library="A_butts" deviceset="GND" device=""/>
-<part name="D1" library="A_butts" deviceset="DIODE-ZENER" device="PTH-7.62MM" value="10V"/>
+<part name="D1" library="A_butts" deviceset="DIODE-ZENER" device="7.62MM-PTH" value="10V"/>
 </parts>
 <sheets>
 <sheet>
@@ -5441,12 +5505,12 @@ Production Part - 8199
 <instance part="R2" gate="G$1" x="38.1" y="15.24" rot="R90"/>
 <instance part="SUPPLY2" gate="G$1" x="38.1" y="55.88"/>
 <instance part="GND2" gate="1" x="33.02" y="2.54"/>
-<instance part="H1" gate="G$1" x="63.5" y="53.34"/>
-<instance part="OUT" gate="G$1" x="50.8" y="48.26" rot="MR0"/>
-<instance part="H2" gate="G$1" x="68.58" y="53.34"/>
-<instance part="IN" gate="G$1" x="7.62" y="73.66"/>
-<instance part="SUPPLY1" gate="G$1" x="27.94" y="76.2"/>
-<instance part="GND1" gate="1" x="27.94" y="66.04"/>
+<instance part="H1" gate="G$1" x="7.62" y="40.64"/>
+<instance part="LED" gate="G$1" x="50.8" y="48.26" rot="MR0"/>
+<instance part="H2" gate="G$1" x="12.7" y="40.64"/>
+<instance part="IN" gate="G$1" x="7.62" y="53.34"/>
+<instance part="SUPPLY1" gate="G$1" x="27.94" y="55.88"/>
+<instance part="GND1" gate="1" x="27.94" y="45.72"/>
 <instance part="D1" gate="G$1" x="10.16" y="17.78" rot="R90"/>
 </instances>
 <busses>
@@ -5468,13 +5532,13 @@ Production Part - 8199
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 <wire x1="38.1" y1="53.34" x2="38.1" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="53.34" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="OUT" gate="G$1" pin="2"/>
+<pinref part="LED" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IN" gate="G$1" pin="2"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="15.24" y1="73.66" x2="27.94" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="73.66" x2="27.94" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="53.34" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="53.34" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -5496,15 +5560,15 @@ Production Part - 8199
 <segment>
 <pinref part="IN" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="15.24" y1="71.12" x2="27.94" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="71.12" x2="27.94" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="50.8" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="50.8" x2="27.94" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CTRL" class="0">
 <segment>
 <pinref part="IN" gate="G$1" pin="3"/>
-<wire x1="17.78" y1="76.2" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
-<label x="17.78" y="76.2" size="1.27" layer="95" xref="yes"/>
+<wire x1="17.78" y1="55.88" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
+<label x="17.78" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="7.62" y1="30.48" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
@@ -5522,7 +5586,7 @@ Production Part - 8199
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="OUT" gate="G$1" pin="1"/>
+<pinref part="LED" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="40.64" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="50.8" x2="38.1" y2="35.56" width="0.1524" layer="91"/>

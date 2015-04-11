@@ -3357,6 +3357,52 @@ Keying posts into board</description>
 <wire x1="3.175" y1="-1.905" x2="1.905" y2="-1.905" width="0.1524" layer="51"/>
 <wire x1="1.905" y1="-1.905" x2="1.905" y2="-0.762" width="0.1524" layer="51"/>
 </package>
+<package name="DIODE-ZENNER-7.62MM">
+<pad name="A" x="-3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<pad name="K" x="3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<text x="-4.716" y="-0.005" size="0.5" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<wire x1="-2.81" y1="0" x2="-1.905" y2="0" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="0" x2="-1.905" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="0.889" x2="1.905" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0.889" x2="1.905" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0" x2="2.81" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0" x2="1.905" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-0.889" x2="1.524" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="-0.889" x2="-1.905" y2="-0.889" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-0.889" x2="-1.905" y2="0" width="0.1524" layer="21"/>
+<text x="4.9" y="0" size="0.5" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="1.524" y1="-0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0.6" x2="-0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.6" x2="0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0" x2="-0.5" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="1" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+</package>
+<package name="DIODE-ZENNER-10.16MM">
+<pad name="A" x="-5.08" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<pad name="K" x="5.08" y="0" drill="1" diameter="1.6" shape="octagon"/>
+<text x="-6.016" y="-0.005" size="0.5" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<wire x1="-4.08" y1="0" x2="-2" y2="0" width="0.1524" layer="21"/>
+<wire x1="-2" y1="0" x2="-2" y2="1" width="0.1524" layer="21"/>
+<wire x1="-2" y1="1" x2="1.524" y2="1" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="1" x2="2" y2="1" width="0.1524" layer="21"/>
+<wire x1="2" y1="1" x2="2" y2="0" width="0.1524" layer="21"/>
+<wire x1="2" y1="0" x2="4.08" y2="0" width="0.1524" layer="21"/>
+<wire x1="2" y1="0" x2="2" y2="-1" width="0.1524" layer="21"/>
+<wire x1="2" y1="-1" x2="1.524" y2="-1" width="0.1524" layer="21"/>
+<wire x1="1.524" y1="-1" x2="-2" y2="-1" width="0.1524" layer="21"/>
+<wire x1="-2" y1="-1" x2="-2" y2="0" width="0.1524" layer="21"/>
+<text x="6.1" y="0" size="0.5" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="1.524" y1="-1" x2="1.524" y2="1" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0.7" x2="-0.5" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.7" x2="0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0" x2="-0.5" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.7" x2="0.5" y2="-0.7" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.7" x2="1" y2="0.7" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.7" x2="0.5" y2="-0.7" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="NPN-1">
@@ -4929,6 +4975,24 @@ Production Part - 8199
 <technology name=""/>
 </technologies>
 </device>
+<device name="7.62MM-PTH" package="DIODE-ZENNER-7.62MM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="10.16MM-PTH" package="DIODE-ZENNER-10.16MM">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="K"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M04" prefix="JP">
@@ -5524,32 +5588,32 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </classes>
 <parts>
 <part name="Q1" library="A_butts" deviceset="TRANSISTOR_NPN" device="TO-92-AMMO-EBC" value="2N3904"/>
-<part name="Q2" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="IRLZ14PBF"/>
+<part name="Q2" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="FQP30N06L"/>
 <part name="R2" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-10.16MM" value="1R5"/>
 <part name="GND2" library="A_butts" deviceset="GND" device=""/>
 <part name="H1" library="A_butts" deviceset="HOLE" device="#2"/>
 <part name="H2" library="A_butts" deviceset="HOLE" device="#2"/>
-<part name="D1" library="A_butts" deviceset="DIODE-ZENER" device="PTH-7.62MM" value="10V"/>
+<part name="D1" library="A_butts" deviceset="DIODE-ZENER" device="10.16MM-PTH" value="10V"/>
 <part name="JP1" library="A_butts" deviceset="M04" device="PTH"/>
 <part name="IC1" library="A_butts" deviceset="ATTINY45" device="TINY85-20-DIP" value="TINY85-20-DIP"/>
 <part name="J1" library="A_butts" deviceset="AVR_SPI_PRG_6" device="PTH_INLINE_I2C"/>
 <part name="SUPPLY3" library="A_butts" deviceset="VCC" device=""/>
 <part name="GND3" library="A_butts" deviceset="GND" device=""/>
-<part name="R1" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-6.35MM" value="100k"/>
+<part name="R1" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-10.16MM" value="100k"/>
 <part name="SUPPLY4" library="A_butts" deviceset="VCC" device=""/>
 <part name="SUPPLY5" library="A_butts" deviceset="VCC" device=""/>
 <part name="GND4" library="A_butts" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="A_butts" deviceset="VCC" device=""/>
 <part name="Q3" library="A_butts" deviceset="TRANSISTOR_NPN" device="TO-92-AMMO-EBC" value="2N3904"/>
-<part name="Q4" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="IRLZ14PBF"/>
+<part name="Q4" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="FQP30N06L"/>
 <part name="R3" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-10.16MM" value="1R5"/>
 <part name="GND1" library="A_butts" deviceset="GND" device=""/>
-<part name="D2" library="A_butts" deviceset="DIODE-ZENER" device="PTH-7.62MM" value="10V"/>
+<part name="D2" library="A_butts" deviceset="DIODE-ZENER" device="10.16MM-PTH" value="10V"/>
 <part name="Q5" library="A_butts" deviceset="TRANSISTOR_NPN" device="TO-92-AMMO-EBC" value="2N3904"/>
-<part name="Q6" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="IRLZ14PBF"/>
+<part name="Q6" library="A_butts" deviceset="MOSFET-NCHANNEL" device="TO-220" value="FQP30N06L"/>
 <part name="R4" library="A_butts" deviceset="RESISTOR" device="PTH-AXIAL-10.16MM" value="1R5"/>
 <part name="GND5" library="A_butts" deviceset="GND" device=""/>
-<part name="D3" library="A_butts" deviceset="DIODE-ZENER" device="PTH-7.62MM" value="10V"/>
+<part name="D3" library="A_butts" deviceset="DIODE-ZENER" device="10.16MM-PTH" value="10V"/>
 </parts>
 <sheets>
 <sheet>

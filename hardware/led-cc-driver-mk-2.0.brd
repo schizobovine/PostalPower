@@ -22,8 +22,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -170,6 +170,24 @@
 <wire x1="18" y1="23.5" x2="15.5" y2="26" width="0" layer="20" curve="90"/>
 <wire x1="15.5" y1="26" x2="2.5" y2="26" width="0" layer="20"/>
 <wire x1="2.5" y1="26" x2="0" y2="23.5" width="0" layer="20" curve="90"/>
+<text x="14.5" y="5.5" size="0.8" layer="22" font="vector" ratio="12" rot="SMR270" align="bottom-center">VCC</text>
+<text x="14.5" y="3" size="0.8" layer="22" font="vector" ratio="12" rot="SMR270" align="bottom-center">GND</text>
+<text x="14.5" y="8" size="0.8" layer="22" font="vector" ratio="12" rot="SMR270" align="bottom-center">EN</text>
+<text x="3.5" y="5.5" size="0.8" layer="22" font="vector" ratio="12" rot="SMR90" align="bottom-center">A</text>
+<text x="3.5" y="3" size="0.8" layer="22" font="vector" ratio="12" rot="SMR90" align="bottom-center">K</text>
+<text x="2" y="7" size="0.8" layer="21" font="vector" ratio="12" rot="SR270" align="center-right">A</text>
+<text x="2" y="1.5" size="0.8" layer="21" font="vector" ratio="12" rot="SR270" align="center-left">K</text>
+<text x="9" y="15.5" size="0.8" layer="21" font="vector" ratio="12" rot="SR180" align="bottom-center">D</text>
+<text x="6.5" y="15.5" size="0.8" layer="21" font="vector" ratio="12" rot="SR180" align="bottom-center">S</text>
+<text x="11.5" y="15.5" size="0.8" layer="21" font="vector" ratio="12" rot="SR180" align="bottom-center">G</text>
+<text x="3.5" y="13" size="1" layer="22" font="vector" ratio="12" rot="SMR180" align="top-left">R1 = 0.5/I
+D1 = 10V Zener
+       (opt)</text>
+<text x="9" y="8.5" size="1" layer="22" font="vector" ratio="12" rot="SMR180" align="center">Constant
+Current
+LED
+Driver</text>
+<text x="9" y="24.5" size="1" layer="22" font="vector" ratio="12" rot="SMR180" align="center">&gt;REVISION</text>
 </plain>
 <libraries>
 <library name="A_butts">
@@ -278,27 +296,34 @@
 <text x="-1.3462" y="1.5748" size="0.5" layer="25" font="vector" ratio="12">&gt;NAME</text>
 <wire x1="4.572" y1="-1.27" x2="5.588" y2="-1.27" width="0.1524" layer="21"/>
 </package>
-<package name="DIODE-7.62MM">
+<package name="DIODE-ZENNER-7.62MM">
 <pad name="A" x="-3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
 <pad name="K" x="3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
 <text x="-4.716" y="-0.005" size="0.5" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
-<wire x1="-2.667" y1="0" x2="-1.905" y2="0" width="0.1524" layer="21"/>
+<wire x1="-2.81" y1="0" x2="-1.905" y2="0" width="0.1524" layer="21"/>
 <wire x1="-1.905" y1="0" x2="-1.905" y2="0.889" width="0.1524" layer="21"/>
 <wire x1="-1.905" y1="0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
 <wire x1="1.524" y1="0.889" x2="1.905" y2="0.889" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="0.889" x2="1.905" y2="0" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="0" x2="2.667" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="0" x2="2.81" y2="0" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="0" x2="1.905" y2="-0.889" width="0.1524" layer="21"/>
 <wire x1="1.905" y1="-0.889" x2="1.524" y2="-0.889" width="0.1524" layer="21"/>
 <wire x1="1.524" y1="-0.889" x2="-1.905" y2="-0.889" width="0.1524" layer="21"/>
 <wire x1="-1.905" y1="-0.889" x2="-1.905" y2="0" width="0.1524" layer="21"/>
-<text x="0" y="0" size="0.508" layer="21" font="vector" ratio="12" align="center">&gt;VALUE</text>
+<text x="4.9" y="0" size="0.5" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
 <wire x1="1.524" y1="-0.889" x2="1.524" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="0.6" x2="-0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="-0.5" y1="-0.6" x2="0.5" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0" x2="-0.5" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="1" y2="0.6" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.6" x2="0.5" y2="-0.6" width="0.1524" layer="21"/>
 </package>
 </packages>
 </library>
 </libraries>
 <attributes>
+<attribute name="REVISION" value="Rev 2.0"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -480,28 +505,24 @@ Please make sure your boards conform to these design rules.</description>
 </autorouter>
 <elements>
 <element name="Q1" library="A_butts" package="TO-92-AMMO" value="2N3904" x="9" y="22.5" smashed="yes">
-<attribute name="NAME" x="7" y="24.667" size="0.5" layer="25" font="vector" ratio="12" align="bottom-center"/>
-<attribute name="VALUE" x="9" y="23.651" size="0.5" layer="27" font="vector" ratio="12" rot="R180" align="top-center"/>
+<attribute name="NAME" x="6" y="24.167" size="0.8" layer="25" font="vector" ratio="12" rot="SR180" align="top-center"/>
+<attribute name="VALUE" x="9" y="23.849" size="0.5" layer="27" font="vector" ratio="12" rot="SR180" align="top-center"/>
 </element>
-<element name="Q2" library="A_butts" package="TO220-THERMPAD" value="2N7000" x="9" y="19" smashed="yes" rot="R180">
-<attribute name="NAME" x="5" y="16.89" size="0.5" layer="25" font="vector" ratio="10" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="8.9" y="11.99" size="0.8" layer="27" font="vector" ratio="10" rot="R180" align="center"/>
+<element name="Q2" library="A_butts" package="TO220-THERMPAD" value="FQP30N06L" x="9" y="19" smashed="yes" rot="R180">
+<attribute name="NAME" x="5" y="16.39" size="0.8" layer="25" font="vector" ratio="12" rot="SR180" align="top-center"/>
+<attribute name="VALUE" x="8.9" y="11.99" size="0.8" layer="27" font="vector" ratio="10" rot="SR180" align="center"/>
 </element>
 <element name="R2" library="A_butts" package="RESISTOR-AXIAL-PTH-10.16MM" value="Iset" x="2" y="14" smashed="yes" rot="R90">
-<attribute name="NAME" x="2" y="7.777" size="0.6096" layer="25" font="vector" ratio="12" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="2" y="20.223" size="0.6096" layer="21" font="vector" ratio="12" align="bottom-center"/>
+<attribute name="NAME" x="2" y="20.223" size="0.8" layer="25" font="vector" ratio="12" rot="SR180" align="top-center"/>
 </element>
 <element name="H1" library="A_butts" package="HOLE-#2" value="HOLE#2" x="2.5" y="23.5" smashed="yes"/>
-<element name="OUT" library="A_butts" package="1X02" value="M02PTH" x="2" y="3" smashed="yes" rot="R90">
-<attribute name="NAME" x="2.8462" y="1.5522" size="0.5" layer="25" font="vector" ratio="12" rot="R180"/>
+<element name="LED" library="A_butts" package="1X02" value="M02PTH" x="2" y="3" smashed="yes" rot="R90">
+<attribute name="NAME" x="0.95" y="4.27" size="0.7" layer="26" font="vector" ratio="12" rot="MR90" align="top-center"/>
 </element>
 <element name="H2" library="A_butts" package="HOLE-#2" value="HOLE#2" x="15.5" y="23.5" smashed="yes"/>
-<element name="IN" library="A_butts" package="1X03" value="M03PTH" x="16" y="3" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.6538" y="1.0748" size="0.5" layer="25" font="vector" ratio="12"/>
-</element>
-<element name="D1" library="A_butts" package="DIODE-7.62MM" value="10V" x="16" y="15" smashed="yes" rot="R270">
-<attribute name="NAME" x="15.995" y="19.716" size="0.5" layer="25" font="vector" ratio="12" align="bottom-center"/>
-<attribute name="VALUE" x="16" y="15" size="0.508" layer="21" font="vector" ratio="12" rot="R270" align="center"/>
+<element name="IN" library="A_butts" package="1X03" value="M03PTH" x="16" y="3" smashed="yes" rot="R90"/>
+<element name="D1" library="A_butts" package="DIODE-ZENNER-7.62MM" value="10V" x="16" y="15" smashed="yes" rot="R270">
+<attribute name="NAME" x="16" y="20" size="0.8" layer="25" font="vector" ratio="12" rot="SR180" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -509,13 +530,15 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="R2" pad="P$2"/>
 <contactref element="Q1" pad="2"/>
 <contactref element="Q2" pad="3"/>
-<wire x1="6.46" y1="19" x2="9" y2="22.5" width="0" layer="19" extent="1-1"/>
-<wire x1="2" y1="19.08" x2="6.46" y2="19" width="0" layer="19" extent="1-1"/>
+<wire x1="2" y1="19.08" x2="2.08" y2="19" width="1.5" layer="1"/>
+<wire x1="2.08" y1="19" x2="6.46" y2="19" width="1.5" layer="1"/>
+<wire x1="6.46" y1="19" x2="6.46" y2="19.96" width="0.5" layer="1"/>
+<wire x1="6.46" y1="19.96" x2="9" y2="22.5" width="0.5" layer="1"/>
 </signal>
 <signal name="VCC">
-<contactref element="OUT" pad="2"/>
+<contactref element="LED" pad="2"/>
 <contactref element="IN" pad="2"/>
-<wire x1="16" y1="5.54" x2="2" y2="5.54" width="0" layer="19" extent="1-16"/>
+<wire x1="2" y1="5.54" x2="16" y2="5.54" width="1.5" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="Q1" pad="1"/>
@@ -538,18 +561,26 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="Q1" pad="3"/>
 <contactref element="Q2" pad="1"/>
 <contactref element="D1" pad="K"/>
-<wire x1="11.54" y1="22.5" x2="11.54" y2="19" width="0" layer="19" extent="1-16"/>
-<wire x1="16" y1="11.19" x2="11.54" y2="19" width="0" layer="19" extent="1-1"/>
-<wire x1="16" y1="8.08" x2="16" y2="11.19" width="0" layer="19" extent="1-1"/>
+<wire x1="11.54" y1="22.5" x2="11.54" y2="19" width="0.5" layer="1"/>
+<wire x1="11.54" y1="19" x2="11.54" y2="15.65" width="0.5" layer="1"/>
+<wire x1="11.54" y1="15.65" x2="16" y2="11.19" width="0.5" layer="1"/>
+<wire x1="16" y1="8.08" x2="16" y2="11.19" width="0.5" layer="1"/>
 </signal>
 <signal name="N$4">
-<contactref element="OUT" pad="1"/>
+<contactref element="LED" pad="1"/>
 <contactref element="Q2" pad="2@1"/>
 <contactref element="Q2" pad="2@2"/>
-<wire x1="9" y1="19" x2="9" y2="4.19" width="0" layer="19" extent="1-16"/>
-<wire x1="2" y1="3" x2="9" y2="4.19" width="0" layer="19" extent="1-1"/>
+<wire x1="2" y1="3" x2="7.81" y2="3" width="1.5" layer="1"/>
+<wire x1="7.81" y1="3" x2="9" y2="4.19" width="0.8" layer="1"/>
+<wire x1="9" y1="19" x2="9" y2="4.19" width="1.5" layer="1"/>
 </signal>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
