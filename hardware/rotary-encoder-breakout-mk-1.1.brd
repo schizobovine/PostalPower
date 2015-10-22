@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="2" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="2" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -162,23 +162,31 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="17.78" x2="0" y2="2.54" width="0" layer="20"/>
+<wire x1="2.54" y1="0" x2="17.78" y2="0" width="0" layer="20"/>
+<wire x1="17.78" y1="0" x2="20.32" y2="2.54" width="0" layer="20" curve="90"/>
+<wire x1="20.32" y1="2.54" x2="20.32" y2="20.32" width="0" layer="20"/>
+<wire x1="20.32" y1="20.32" x2="17.78" y2="22.86" width="0" layer="20" curve="90"/>
+<wire x1="17.78" y1="22.86" x2="2.54" y2="22.86" width="0" layer="20"/>
+<wire x1="2.54" y1="22.86" x2="0" y2="20.32" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="20.32" x2="0" y2="2.54" width="0" layer="20"/>
 <wire x1="0" y1="2.54" x2="2.54" y2="0" width="0" layer="20" curve="90"/>
-<wire x1="2.54" y1="0" x2="20.32" y2="0" width="0" layer="20"/>
-<wire x1="20.32" y1="0" x2="22.86" y2="2.54" width="0" layer="20" curve="90"/>
-<wire x1="22.86" y1="2.54" x2="22.86" y2="17.78" width="0" layer="20"/>
-<wire x1="22.86" y1="17.78" x2="20.32" y2="20.32" width="0" layer="20" curve="90"/>
-<wire x1="20.32" y1="20.32" x2="2.54" y2="20.32" width="0" layer="20"/>
-<wire x1="2.54" y1="20.32" x2="0" y2="17.78" width="0" layer="20" curve="90"/>
-<text x="6.985" y="12.7" size="1" layer="22" font="vector" ratio="12" rot="SMR270" align="top-center">A</text>
-<text x="6.985" y="7.62" size="1" layer="22" font="vector" ratio="12" rot="SMR270" align="top-center">B</text>
-<text x="6.985" y="10.16" size="1" layer="22" font="vector" ratio="12" rot="SMR270" align="top-center">COM</text>
-<text x="18.415" y="7.62" size="1" layer="22" font="vector" ratio="12" rot="SMR90" align="top-center">SW</text>
-<text x="18.415" y="12.7" size="1" layer="22" font="vector" ratio="12" rot="SMR90" align="top-center">COM</text>
-<text x="4.445" y="13.97" size="1" layer="21" font="vector" ratio="12" rot="SR270" align="top-center">A</text>
-<text x="4.445" y="6.35" size="1" layer="21" font="vector" ratio="12" rot="SR270" align="top-center">GND</text>
-<text x="4.445" y="11.43" size="1" layer="21" font="vector" ratio="12" rot="SR270" align="top-center">B</text>
-<text x="4.445" y="8.89" size="1" layer="21" font="vector" ratio="12" rot="SR270" align="top-center">SW</text>
+<text x="7.62" y="4.445" size="1" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">A</text>
+<text x="12.7" y="4.445" size="1" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">B</text>
+<text x="10.16" y="4.445" size="1" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">COM</text>
+<text x="12.7" y="20.955" size="1" layer="22" font="vector" ratio="12" rot="MR180" align="top-center">SW</text>
+<text x="7.62" y="20.955" size="1" layer="22" font="vector" ratio="12" rot="MR180" align="top-center">COM</text>
+<text x="6.35" y="3.4925" size="1" layer="21" font="vector" ratio="12" rot="SR0" align="bottom-center">A</text>
+<text x="13.97" y="3.4925" size="1" layer="21" font="vector" ratio="12" rot="SR0" align="bottom-center">GND</text>
+<text x="8.89" y="3.4925" size="1" layer="21" font="vector" ratio="12" rot="SR0" align="bottom-center">B</text>
+<text x="11.43" y="3.4925" size="1" layer="21" font="vector" ratio="12" rot="SR0" align="bottom-center">SW</text>
+<text x="2.8575" y="1.905" size="1" layer="16" font="vector" ratio="16" rot="MR0" align="center">&gt;VERSION</text>
+<text x="2.8575" y="1.905" size="1" layer="22" font="vector" ratio="16" rot="MR0" align="center">&gt;VERSION</text>
+<text x="10.16" y="8.5725" size="1.27" layer="22" font="vector" ratio="15" rot="MR0" align="center">Rotary Encoder
+Breakout</text>
+<text x="10.16" y="8.5725" size="1.27" layer="16" font="vector" ratio="15" rot="MR0" align="center">Rotary Encoder
+Breakout</text>
+<text x="3.175" y="1.905" size="1" layer="1" font="vector" ratio="16" rot="SR0" align="center">&gt;VERSION</text>
+<text x="3.175" y="1.905" size="1" layer="21" font="vector" ratio="16" rot="SR0" align="center">&gt;VERSION</text>
 </plain>
 <libraries>
 <library name="A_butts">
@@ -240,10 +248,171 @@
 <wire x1="-0.508" y1="-1.27" x2="-1.27" y2="-0.508" width="0.1524" layer="21"/>
 <wire x1="0.508" y1="-1.27" x2="-0.508" y2="-1.27" width="0.1524" layer="21"/>
 </package>
+<package name="COW_SMALL_METAL">
+<wire x1="-2.286" y1="2.54" x2="2.286" y2="2.54" width="0.3048" layer="1" curve="121.890792"/>
+<wire x1="0.254" y1="0" x2="1.27" y2="0.508" width="0.3048" layer="1"/>
+<wire x1="-0.254" y1="0" x2="-1.27" y2="0.508" width="0.3048" layer="1"/>
+<wire x1="-1.27" y1="-0.508" x2="1.27" y2="-0.508" width="0.3048" layer="1"/>
+<wire x1="1.778" y1="-1.524" x2="-1.778" y2="-1.524" width="0.3048" layer="1" curve="-140"/>
+<wire x1="2.032" y1="-1.016" x2="-2.032" y2="-0.762" width="0.3048" layer="1" curve="220"/>
+<wire x1="1.778" y1="-1.524" x2="2.032" y2="-1.016" width="0.3048" layer="1"/>
+<wire x1="-1.778" y1="-1.524" x2="-2.032" y2="-0.762" width="0.3048" layer="1"/>
+<wire x1="-1.27" y1="-2.286" x2="1.27" y2="-2.286" width="0.3048" layer="1" curve="180"/>
+<wire x1="-1.27" y1="-2.286" x2="-0.762" y2="-1.27" width="0.3048" layer="1" curve="-75"/>
+<wire x1="1.27" y1="-2.286" x2="0.762" y2="-1.27" width="0.3048" layer="1" curve="75"/>
+<text x="0" y="-4.264" size="1" layer="1" font="vector" ratio="16" align="center">deathbycow</text>
+<wire x1="-2.286" y1="2.54" x2="2.286" y2="2.54" width="0.3048" layer="21" curve="121.890792"/>
+<wire x1="0.254" y1="0" x2="1.27" y2="0.508" width="0.3048" layer="21"/>
+<wire x1="-0.254" y1="0" x2="-1.27" y2="0.508" width="0.3048" layer="21"/>
+<wire x1="-1.27" y1="-0.508" x2="1.27" y2="-0.508" width="0.3048" layer="21"/>
+<wire x1="1.778" y1="-1.524" x2="-1.778" y2="-1.524" width="0.3048" layer="21" curve="-140"/>
+<wire x1="2.032" y1="-1.016" x2="-2.032" y2="-0.762" width="0.3048" layer="21" curve="220"/>
+<wire x1="1.778" y1="-1.524" x2="2.032" y2="-1.016" width="0.3048" layer="21"/>
+<wire x1="-1.778" y1="-1.524" x2="-2.032" y2="-0.762" width="0.3048" layer="21"/>
+<wire x1="-1.27" y1="-2.286" x2="1.27" y2="-2.286" width="0.3048" layer="21" curve="180"/>
+<wire x1="-1.27" y1="-2.286" x2="-0.762" y2="-1.27" width="0.3048" layer="21" curve="-75"/>
+<wire x1="1.27" y1="-2.286" x2="0.762" y2="-1.27" width="0.3048" layer="21" curve="75"/>
+<text x="0" y="-4.264" size="1" layer="21" font="vector" ratio="16" align="center">deathbycow</text>
+</package>
+<package name="OSHWLOGO_TINY">
+<polygon width="0.2" layer="21">
+<vertex x="-0.5" y="0" curve="-90"/>
+<vertex x="0" y="0.5"/>
+<vertex x="0" y="0.7" curve="90"/>
+<vertex x="-0.7" y="0"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="0" y="0.5" curve="-90"/>
+<vertex x="0.5" y="0"/>
+<vertex x="0.7" y="0" curve="90"/>
+<vertex x="0" y="0.7"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="-0.7" y="0"/>
+<vertex x="-0.5" y="0" curve="60"/>
+<vertex x="-0.25" y="-0.45"/>
+<vertex x="-0.35" y="-0.6" curve="-60"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="0.25" y="-0.45" curve="60"/>
+<vertex x="0.5" y="0"/>
+<vertex x="0.7" y="0" curve="-60"/>
+<vertex x="0.35" y="-0.6"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.5" y="0" curve="-90"/>
+<vertex x="0" y="0.5"/>
+<vertex x="0" y="0.7" curve="90"/>
+<vertex x="-0.7" y="0"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="0" y="0.5" curve="-90"/>
+<vertex x="0.5" y="0"/>
+<vertex x="0.7" y="0" curve="90"/>
+<vertex x="0" y="0.7"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.7" y="0"/>
+<vertex x="-0.5" y="0" curve="60"/>
+<vertex x="-0.25" y="-0.45"/>
+<vertex x="-0.35" y="-0.6" curve="-60"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="0.25" y="-0.45" curve="60"/>
+<vertex x="0.5" y="0"/>
+<vertex x="0.7" y="0" curve="-60"/>
+<vertex x="0.35" y="-0.6"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="-0.5" y="-0.155"/>
+<vertex x="-0.5" y="0.155"/>
+<vertex x="-1" y="0.1"/>
+<vertex x="-1" y="-0.1"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="-0.155" y="0.5"/>
+<vertex x="0.155" y="0.5"/>
+<vertex x="0.1" y="1"/>
+<vertex x="-0.1" y="1"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="0.5" y="0.155"/>
+<vertex x="0.5" y="-0.155"/>
+<vertex x="1" y="-0.1"/>
+<vertex x="1" y="0.1"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="-0.25" y="0.47"/>
+<vertex x="-0.47" y="0.25"/>
+<vertex x="-0.8" y="0.66"/>
+<vertex x="-0.66" y="0.8"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="0.47" y="0.25"/>
+<vertex x="0.25" y="0.47"/>
+<vertex x="0.66" y="0.8"/>
+<vertex x="0.8" y="0.66"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="-0.465" y="-0.25"/>
+<vertex x="-0.26" y="-0.465"/>
+<vertex x="-0.66" y="-0.8"/>
+<vertex x="-0.8" y="-0.66"/>
+</polygon>
+<polygon width="0.2" layer="21">
+<vertex x="0.26" y="-0.47"/>
+<vertex x="0.47" y="-0.25"/>
+<vertex x="0.8" y="-0.66"/>
+<vertex x="0.66" y="-0.8"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.5" y="-0.155"/>
+<vertex x="-0.5" y="0.155"/>
+<vertex x="-1" y="0.1"/>
+<vertex x="-1" y="-0.1"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.155" y="0.5"/>
+<vertex x="0.155" y="0.5"/>
+<vertex x="0.1" y="1"/>
+<vertex x="-0.1" y="1"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="0.5" y="0.155"/>
+<vertex x="0.5" y="-0.155"/>
+<vertex x="1" y="-0.1"/>
+<vertex x="1" y="0.1"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.25" y="0.47"/>
+<vertex x="-0.47" y="0.25"/>
+<vertex x="-0.8" y="0.66"/>
+<vertex x="-0.66" y="0.8"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="0.47" y="0.25"/>
+<vertex x="0.25" y="0.47"/>
+<vertex x="0.66" y="0.8"/>
+<vertex x="0.8" y="0.66"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="-0.465" y="-0.25"/>
+<vertex x="-0.26" y="-0.465"/>
+<vertex x="-0.66" y="-0.8"/>
+<vertex x="-0.8" y="-0.66"/>
+</polygon>
+<polygon width="0.2" layer="1">
+<vertex x="0.26" y="-0.47"/>
+<vertex x="0.47" y="-0.25"/>
+<vertex x="0.8" y="-0.66"/>
+<vertex x="0.66" y="-0.8"/>
+</polygon>
+</package>
 </packages>
 </library>
 </libraries>
 <attributes>
+<attribute name="VERSION" value="v1.1"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -424,47 +593,59 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="FRAME1" library="A_butts" package="DUMMY" value="FRAME-LETTERNO_PACKAGE" x="0" y="0">
-<attribute name="VERSION" value="1.0" x="13.97" y="-1.27" size="1.778" layer="27" display="off"/>
-<attribute name="DESIGNER" value="sean@yak.net" x="13.97" y="-1.27" size="1.778" layer="27" display="off"/>
+<element name="FRAME1" library="A_butts" package="DUMMY" value="FRAME-LETTERNO_PACKAGE" x="0" y="0" rot="R90">
+<attribute name="VERSION" value="1.0" x="1.27" y="13.97" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESIGNER" value="sean@yak.net" x="1.27" y="13.97" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="U1" library="A_butts" package="ROTARY_ENCODER_SWITCH" value="ROTARY_ENCODER_SWITCH" x="12.7" y="10.16" smashed="yes" rot="R180"/>
-<element name="JP1" library="A_butts" package="1X04-PTH-VERT" value="M04PTH" x="1.905" y="6.35" smashed="yes" rot="R90"/>
+<element name="U1" library="A_butts" package="ROTARY_ENCODER_SWITCH" value="ROTARY_ENCODER_SWITCH" x="10.16" y="12.7" smashed="yes" rot="R270"/>
+<element name="JP1" library="A_butts" package="1X04-PTH-VERT" value="M04PTH" x="13.97" y="1.905" smashed="yes" rot="R180"/>
+<element name="U$2" library="A_butts" package="COW_SMALL_METAL" value="" x="10.16" y="15.875" rot="MR0"/>
+<element name="U$1" library="A_butts" package="OSHWLOGO_TINY" value="" x="17.145" y="1.905"/>
+<element name="U$3" library="A_butts" package="OSHWLOGO_TINY" value="" x="17.145" y="1.905" rot="MR0"/>
 </elements>
 <signals>
 <signal name="SW1">
 <contactref element="U1" pad="SW1"/>
 <contactref element="JP1" pad="2"/>
-<wire x1="1.905" y1="8.89" x2="5.715" y2="5.08" width="0.635" layer="1"/>
-<wire x1="5.715" y1="5.08" x2="7.62" y2="5.08" width="0.635" layer="1"/>
-<wire x1="7.62" y1="5.08" x2="10.16" y2="7.62" width="0.635" layer="1"/>
-<wire x1="10.16" y1="7.62" x2="19.91" y2="7.62" width="0.635" layer="1"/>
-<wire x1="19.91" y1="7.62" x2="19.95" y2="7.66" width="0.635" layer="1"/>
+<wire x1="11.43" y1="1.905" x2="14.605" y2="5.08" width="0.4064" layer="1"/>
+<wire x1="14.605" y1="5.08" x2="14.605" y2="8.89" width="0.4064" layer="1"/>
+<wire x1="14.605" y1="8.89" x2="12.66" y2="10.835" width="0.4064" layer="1"/>
+<wire x1="12.66" y1="10.835" x2="12.66" y2="19.95" width="0.4064" layer="1"/>
 </signal>
 <signal name="A">
 <contactref element="U1" pad="A"/>
 <contactref element="JP1" pad="4"/>
-<wire x1="1.905" y1="13.97" x2="4.14" y2="13.97" width="0.635" layer="1"/>
-<wire x1="4.14" y1="13.97" x2="5.45" y2="12.66" width="0.635" layer="1"/>
+<wire x1="6.35" y1="1.905" x2="7.66" y2="3.215" width="0.4064" layer="1"/>
+<wire x1="7.66" y1="3.215" x2="7.66" y2="5.45" width="0.4064" layer="1"/>
 </signal>
 <signal name="B">
 <contactref element="U1" pad="B"/>
 <contactref element="JP1" pad="3"/>
-<wire x1="1.905" y1="11.43" x2="1.905" y2="11.205" width="0.635" layer="1"/>
-<wire x1="1.905" y1="11.205" x2="5.45" y2="7.66" width="0.635" layer="1"/>
+<wire x1="8.89" y1="1.905" x2="9.115" y2="1.905" width="0.4064" layer="1"/>
+<wire x1="9.115" y1="1.905" x2="12.66" y2="5.45" width="0.4064" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U1" pad="C"/>
 <contactref element="U1" pad="SW2"/>
 <contactref element="JP1" pad="1"/>
-<wire x1="1.905" y1="6.35" x2="3.175" y2="5.08" width="0.635" layer="16"/>
-<wire x1="3.175" y1="5.08" x2="7.62" y2="5.08" width="0.635" layer="16"/>
-<wire x1="7.62" y1="5.08" x2="12.7" y2="10.16" width="0.635" layer="16"/>
-<wire x1="12.7" y1="10.16" x2="17.45" y2="10.16" width="0.635" layer="16"/>
-<wire x1="17.45" y1="10.16" x2="19.95" y2="12.66" width="0.635" layer="16"/>
-<wire x1="5.45" y1="10.16" x2="12.7" y2="10.16" width="0.635" layer="16"/>
+<polygon width="0.1524" layer="1">
+<vertex x="20.32" y="20.32"/>
+<vertex x="20.32" y="2.54" curve="-90"/>
+<vertex x="17.78" y="0"/>
+<vertex x="2.54" y="0" curve="-90"/>
+<vertex x="0" y="2.54"/>
+<vertex x="0" y="20.32" curve="-90"/>
+<vertex x="2.54" y="22.86"/>
+<vertex x="17.78" y="22.86" curve="-90"/>
+</polygon>
 </signal>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
